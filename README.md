@@ -2,7 +2,7 @@
 
 Repositório oficial do projeto integrador da disciplina de Banco de Dados e SQL.
 
-A proposta deste projeto é colocar em prática os conhecimentos estudados até a Aula 7, especialmente modelagem relacional, estruturação de banco, consultas SQL, filtros, agrupamentos, `JOINs` e subconsultas. A apostila do módulo prevê justamente um momento de projeto prático e revisão com base em um sistema acadêmico relacional.[file:9]
+A proposta deste projeto é colocar em prática os conhecimentos estudados até a Aula 7, especialmente modelagem relacional, estruturação de banco, consultas SQL, filtros, agrupamentos, `JOINs` e subconsultas. A apostila do módulo prevê justamente um momento de projeto prático e revisão com base em um sistema acadêmico relacional.
 
 ## Objetivo do projeto
 
