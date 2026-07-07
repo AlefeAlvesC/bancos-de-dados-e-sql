@@ -1,6 +1,5 @@
-//ESSA PARTE NÃO SERÁ UTILIZADA
-
 const db = require("../config/database");
+const { getFallbackTurmas } = require("../services/localData");
 
 module.exports = {
     async index(req, res) {
@@ -12,6 +11,12 @@ module.exports = {
             res.json(rows);
         } catch (error) {
             console.error(error);
+
+            const fallbackRows = getFallbackTurmas();
+            if (fallbackRows.length > 0) {
+                return res.json(fallbackRows);
+            }
+
             res.status(500).json({
                 erro: "Erro ao buscar turmas"
             });
