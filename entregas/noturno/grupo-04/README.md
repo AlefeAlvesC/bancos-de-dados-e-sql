@@ -11,14 +11,14 @@ Este repositório contém a entrega do Projeto Integrador correspondente ao ence
 Para atender às diretrizes do papel de equipe, dividimos nosso grupo nas seguintes frentes técnicas:
 
 * **Equipe de Desenvolvimento: (Back-End)**
-    * [Paulo Mesquita]() - *Responsável...*
-    * [Álefe Alves]() — *Responsável...*
-    * [Luciano dos Santos]() — *Responsável...*
+    * [Paulo Mesquita]() - *Estrutura da API, integração com MySQL e apoio na consulta principal.*
+    * [Álefe Alves]() — *Organização da entrega, apoio no backend e validação técnica do projeto.*
+    * [Luciano dos Santos]() — *Suporte à API, revisão das rotas e consistência da integração.*
 * **Equipe de Desenvolvimento: (Front-End)**
-    * [Amanda Barbosa]() — *Responsável...*
-    * [Leonam Souza]() — *Responsável...*
-    * [Edson Felipe]() — *Responsável...*
-    * [Felipe Spínola]() — *Responsável...*
+    * [Amanda Barbosa]() — *Estrutura da interface e composição visual da tela principal.*
+    * [Leonam Souza]() — *Componentes de filtro e refinamento da experiência de uso.*
+    * [Edson Felipe]() — *Apoio na renderização da tabela e organização do frontend.*
+    * [Felipe Spínola]() — *Apoio geral no frontend, ajustes de layout e validação visual.*
 
 ---
 
@@ -54,23 +54,43 @@ Conforme o escopo obrigatório solicitado pelo PO, a aplicação foca puramente 
 ## 🚀 Arquitetura e Como Executar o Projeto
 
 **Tecnologias Utilizadas:**
-* **Backend:** (Ex: Node.js / Express, Python / Flask - Preencher aqui)
-* **Frontend:** (Ex: React, HTML/CSS/JS puro - Preencher aqui)
-* **Banco de Dados:** MySQL / SGBD Relacional
+* **Backend:** Node.js com Express e mysql2.
+* **Frontend:** React com Vite e Axios.
+* **Banco de Dados:** MySQL.
 
 **Instruções para Execução Local:**
 1. **Clone o repositório:**
-   ```bash
+    ```bash
    git clone https://github.com/AlefeAlvesC/bancos-de-dados-e-sql.git
+    ```
 
-2. **Suba o banco de dados: Execute o script SQL fornecido**
-(base_escola_db_humana.sql) no seu ambiente MySQL local para criar e popular o banco escola_db.
+2. **Suba o banco de dados:** execute o script `base/escola_db.sql` no seu MySQL local para criar e popular o banco `escola_db`.
 
 3. **Configure as variáveis de ambiente:**
-Altere as credenciais de acesso ao banco no arquivo de configuração da aplicação (.env ou equivalente).
+    use o arquivo `.env` dentro da pasta `entregas/noturno/grupo-04/` como base e ajuste as credenciais conforme o seu ambiente.
 
-4. **Inicie o servidor:**
-   ```bash
-   npm install && npm start  # (Ou o comando correspondente da sua tecnologia)
+4. **Inicie o backend:**
+    ```bash
+    cd entregas/noturno/grupo-04/app/escola-api
+    npm install
+    npm start
+    ```
+
+5. **Inicie o frontend:**
+    ```bash
+    cd ../escola-web
+    npm install
+    npm run dev
+    ```
+
+6. **Acesse a aplicação:**
+    abra o endereço informado pelo Vite no navegador.
+
+## Estrutura técnica entregue
+
+* **API:** rota `GET /alunos` para consulta dos registros da base.
+* **Interface web:** listagem com filtros por nome e turma.
+* **Integração:** consumo da API via `axios` e exibição dos dados em tabela.
+* **Modelagem:** base relacional com professores, cursos, turmas, alunos, matrículas e notas.
 
 ***Projeto desenvolvido pelo Grupo 4 para o Módulo 9 de Desenvolvimento Full Stack — 2026.***
